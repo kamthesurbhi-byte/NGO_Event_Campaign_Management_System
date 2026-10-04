@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Events - NGO Event & Campaign Management System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+
+<header>
+
+    <h2>NGO Event & Campaign Management System</h2>
+
+    <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/projects">Projects</a>
+    <a href="/events">Events</a>
+    <a href="/volunteer">Volunteer</a>
+    <a href="/contact">Contact</a>
+</nav>
+
+</header>
+
+
+<main>
+
+    <h2>Events & Campaigns</h2>
+
+    <p>
+        Events and campaigns managed by the NGO.
+    </p>
+
+    <br>
+
+
+    {% if events %}
+
+        {% for event in events %}
+
+        <div class="project">
+
+            <h3>
+                {{ event.event_name }}
+            </h3>
+
+            <p>
+                {{ event.description }}
+            </p>
+
+            <p>
+                <strong>Date:</strong>
+                {{ event.event_date }}
+            </p>
+
+            <p>
+                <strong>Location:</strong>
+                {{ event.location }}
+            </p>
+
+            <p>
+                <strong>Status:</strong>
+                {{ event.status }}
+            </p>
+
+        </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="project">
+
+            <h3>No Events Available</h3>
+
+            <p>
+                No events or campaigns have been added yet.
+            </p>
+
+        </div>
+
+    {% endif %}
+
+
+    <br>
+
+    <a href="/add-event" class="btn">
+        Add New Event
+    </a>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 NGO Event & Campaign Management System
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

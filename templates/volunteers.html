@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registered Volunteers - NGO Event & Campaign Management System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header>
+
+    <h2>NGO Event & Campaign Management System</h2>
+
+    <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/projects">Projects</a>
+    <a href="/events">Events</a>
+    <a href="/volunteer">Volunteer</a>
+    <a href="/contact">Contact</a>
+</nav>
+
+</header>
+
+
+<main>
+
+    <h2>Registered Volunteers</h2>
+
+    <p>
+        Volunteers registered for NGO activities.
+    </p>
+
+    <br>
+
+    {% if volunteers %}
+
+    <div class="project">
+
+        <table style="width:100%; border-collapse:collapse;">
+
+            <tr>
+
+                <th style="padding:12px; border-bottom:2px solid #E67E22;">
+                    Name
+                </th>
+
+                <th style="padding:12px; border-bottom:2px solid #E67E22;">
+                    Email
+                </th>
+
+                <th style="padding:12px; border-bottom:2px solid #E67E22;">
+                    Phone
+                </th>
+
+                <th style="padding:12px; border-bottom:2px solid #E67E22;">
+                    Address
+                </th>
+
+                <th style="padding:12px; border-bottom:2px solid #E67E22;">
+                    Skills
+                </th>
+
+            </tr>
+
+
+            {% for volunteer in volunteers %}
+
+            <tr>
+
+                <td style="padding:12px; border-bottom:1px solid #ddd;">
+                    {{ volunteer.name }}
+                </td>
+
+                <td style="padding:12px; border-bottom:1px solid #ddd;">
+                    {{ volunteer.email }}
+                </td>
+
+                <td style="padding:12px; border-bottom:1px solid #ddd;">
+                    {{ volunteer.phone }}
+                </td>
+
+                <td style="padding:12px; border-bottom:1px solid #ddd;">
+                    {{ volunteer.address }}
+                </td>
+
+                <td style="padding:12px; border-bottom:1px solid #ddd;">
+                    {{ volunteer.skills }}
+                </td>
+
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+    {% else %}
+
+    <div class="project">
+
+        <h3>No Volunteers Registered</h3>
+
+        <p>
+            No volunteer registration records are available.
+        </p>
+
+    </div>
+
+    {% endif %}
+
+    <br>
+
+    <a href="/volunteer" class="btn">
+        Register New Volunteer
+    </a>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 NGO Event & Campaign Management System
+    </p>
+
+</footer>
+
+</body>
+
+</html>

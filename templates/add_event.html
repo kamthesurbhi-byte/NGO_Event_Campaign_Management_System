@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Event - NGO Event & Campaign Management System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header>
+
+    <h2>NGO Event & Campaign Management System</h2>
+
+    <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/projects">Projects</a>
+    <a href="/events">Events</a>
+    <a href="/volunteer">Volunteer</a>
+    <a href="/contact">Contact</a>
+</nav>
+
+</header>
+
+
+<main>
+
+    <h2>Add Event / Campaign</h2>
+
+    <p>
+        Add an NGO event or campaign to the management system.
+    </p>
+
+    <br>
+
+
+    <!-- Event Form -->
+
+    <form method="POST" action="/add-event">
+
+        <label>Event / Campaign Name:</label>
+
+        <input type="text"
+               name="event_name"
+               placeholder="Enter event or campaign name"
+               required>
+
+        <br><br>
+
+
+        <label>Description:</label>
+
+        <textarea name="description"
+                  placeholder="Enter event details"
+                  required></textarea>
+
+        <br><br>
+
+
+        <label>Event Date:</label>
+
+        <input type="date"
+               name="event_date"
+               required>
+
+        <br><br>
+
+
+        <label>Location:</label>
+
+        <input type="text"
+               name="location"
+               placeholder="Enter event location"
+               required>
+
+        <br><br>
+
+
+        <label>Status:</label>
+
+        <select name="status">
+
+            <option value="Upcoming">
+                Upcoming
+            </option>
+
+            <option value="Active">
+                Active
+            </option>
+
+            <option value="Completed">
+                Completed
+            </option>
+
+        </select>
+
+        <br><br>
+
+
+        <button type="submit">
+            Add Event
+        </button>
+
+    </form>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 NGO Event & Campaign Management System
+    </p>
+
+</footer>
+
+</body>
+
+</html>

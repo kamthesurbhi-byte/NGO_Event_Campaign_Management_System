@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Volunteer Registration - NGO Event & Campaign Management System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header>
+
+    <h2>NGO Event & Campaign Management System</h2>
+
+    <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/projects">Projects</a>
+    <a href="/events">Events</a>
+    <a href="/volunteer">Volunteer</a>
+    <a href="/contact">Contact</a>
+</nav>
+
+</header>
+
+
+<main>
+
+    <h2>Volunteer Registration</h2>
+
+    <p>
+        Join us as a volunteer and support NGO activities.
+    </p>
+
+    <br>
+
+
+    <!-- Volunteer Registration Form -->
+
+    <form method="POST" action="/volunteer">
+
+        <label>Name:</label>
+
+        <input type="text"
+               name="name"
+               placeholder="Enter your name"
+               required>
+
+        <br><br>
+
+
+        <label>Email:</label>
+
+        <input type="email"
+               name="email"
+               placeholder="Enter your email"
+               required>
+
+        <br><br>
+
+
+        <label>Phone:</label>
+
+        <input type="text"
+               name="phone"
+               placeholder="Enter your phone number"
+               required>
+
+        <br><br>
+
+
+        <label>Address:</label>
+
+        <textarea name="address"
+                  placeholder="Enter your address"></textarea>
+
+        <br><br>
+
+
+        <label>Skills:</label>
+
+        <input type="text"
+               name="skills"
+               placeholder="e.g. Teaching, Event Management">
+
+        <br><br>
+
+
+        <button type="submit">
+            Register as Volunteer
+        </button>
+
+    </form>
+
+
+    <br><br>
+
+
+    <!-- Registered Volunteers Button -->
+
+    <div style="text-align: center;">
+
+        <a href="/volunteers" class="btn">
+            View Registered Volunteers
+        </a>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 NGO Event & Campaign Management System
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

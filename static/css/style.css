@@ -1,0 +1,206 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background: #FFF8F0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #5D4037;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Website Title */
+header h1,
+header h2 {
+    margin-bottom: 10px;
+}
+
+/* Navigation */
+nav {
+    margin-top: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: #F5B041;
+    text-decoration: underline;
+}
+
+/* Home Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: #FFFFFF;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #E67E22;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn,
+button {
+    display: inline-block;
+    background: #E67E22;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover,
+button:hover {
+    background: #CA6F1E;
+}
+
+/* Welcome Section */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    background: #FFF8F0;
+}
+
+section h2 {
+    margin-bottom: 15px;
+    color: #E67E22;
+}
+
+/* Main Content */
+main {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+main h2 {
+    color: #E67E22;
+    margin-bottom: 20px;
+}
+
+main p {
+    margin-bottom: 15px;
+}
+
+/* Project Cards */
+.project {
+    width: 80%;
+    max-width: 700px;
+    margin: 25px auto;
+    padding: 25px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(93, 64, 55, 0.15);
+    text-align: center;
+}
+
+.project h3 {
+    color: #E67E22;
+    margin-bottom: 10px;
+}
+
+/* Forms */
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(93, 64, 55, 0.15);
+    text-align: left;
+}
+
+form label {
+    font-weight: bold;
+    color: #5D4037;
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #D7CCC8;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+form button {
+    display: block;
+    margin: 20px auto 0;
+}
+
+/* Footer */
+footer {
+    background: #3E2723;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    nav a {
+        margin: 5px 8px;
+    }
+
+    .project {
+        width: 100%;
+    }
+
+    main {
+        padding: 40px 15px;
+    }
+}
