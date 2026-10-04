@@ -175,7 +175,27 @@ def events():
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
+@app.route("/dashboard")
+def dashboard():
+    cursor = db.cursor()
 
+    cursor.execute("SELECT COUNT(*) FROM volunteers")
+    total_volunteers = cursor.fetchone()[0]
+
+    cursor.execute("SELECT COUNT(*) FROM events")
+    total_events = cursor.fetchone()[0]
+
+    cursor.execute("SELECT COUNT(*) FROM projects")
+    total_projects = cursor.fetchone()[0]
+
+    cursor.close()
+
+    return render_template(
+        "dashboard.html",
+        total_volunteers=total_volunteers,
+        total_events=total_events,
+        total_projects=total_projects
+    )
 
 # =========================
 # Run Application

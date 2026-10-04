@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - NGO Event & Campaign Management System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <h2>NGO Event & Campaign Management System</h2>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/projects">Projects</a>
+        <a href="/events">Events</a>
+        <a href="/volunteer">Volunteer</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+
+    <h2>NGO Dashboard</h2>
+
+    <p>
+        Welcome to the NGO Event & Campaign Management System.
+    </p>
+
+    <div class="project">
+        <h3>Sevavrat Foundation</h3>
+
+        <p>
+            NGO working for the welfare of children in slum areas,
+            focusing on education and overall development.
+        </p>
+
+        <p>
+            <strong>Project:</strong>
+            Education and Digital Literacy
+        </p>
+    </div>
+
+    <div class="project">
+        <h3>Dashboard Information</h3>
+
+        <p>
+            <strong>Total Volunteers:</strong>
+            {{ total_volunteers }}
+        </p>
+
+        <p>
+            <strong>Total Events / Campaigns:</strong>
+            {{ total_events }}
+        </p>
+
+        <p>
+            <strong>Total Projects:</strong>
+            {{ total_projects }}
+        </p>
+    </div>
+
+    <div class="project">
+
+        <h3>Quick Actions</h3>
+
+        <br>
+
+        <a href="/events" class="btn">View Events</a>
+
+        <br><br>
+
+        <a href="/volunteers" class="btn">View Volunteers</a>
+
+        <br><br>
+
+        <a href="/add-event" class="btn">Add Event</a>
+
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2026 NGO Event & Campaign Management System</p>
+</footer>
+
+</body>
+</html>
