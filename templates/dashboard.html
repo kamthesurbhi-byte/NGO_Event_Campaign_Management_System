@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,6 @@
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-
 <body>
 
 <header>
@@ -17,6 +17,7 @@
 
     <nav>
         <a href="/">Home</a>
+        <a href="/dashboard">Dashboard</a>
         <a href="/about">About</a>
         <a href="/projects">Projects</a>
         <a href="/events">Events</a>
@@ -26,64 +27,41 @@
 </header>
 
 <main>
-
     <h2>NGO Dashboard</h2>
 
-    <p>
-        Welcome to the NGO Event & Campaign Management System.
-    </p>
+    <p>Welcome to the NGO Event & Campaign Management System.</p>
 
     <div class="project">
         <h3>Sevavrat Foundation</h3>
-
-        <p>
-            NGO working for the welfare of children in slum areas,
-            focusing on education and overall development.
-        </p>
-
-        <p>
-            <strong>Project:</strong>
-            Education and Digital Literacy
-        </p>
+        <p>Working for the welfare of children in slum areas, focusing on education and overall development.</p>
+        <p><strong>Project:</strong> Education and Digital Literacy</p>
     </div>
 
-    <div class="project">
-        <h3>Dashboard Information</h3>
+    <div class="dashboard-stats">
+        <div class="stat-card">
+            <h3>👥 Total Volunteers</h3>
+            <p class="stat-number">{{ total_volunteers }}</p>
+        </div>
 
-        <p>
-            <strong>Total Volunteers:</strong>
-            {{ total_volunteers }}
-        </p>
+        <div class="stat-card">
+            <h3>📅 Total Events</h3>
+            <p class="stat-number">{{ total_events }}</p>
+        </div>
 
-        <p>
-            <strong>Total Events / Campaigns:</strong>
-            {{ total_events }}
-        </p>
-
-        <p>
-            <strong>Total Projects:</strong>
-            {{ total_projects }}
-        </p>
+        <div class="stat-card">
+            <h3>📋 Total Projects</h3>
+            <p class="stat-number">{{ total_projects }}</p>
+        </div>
     </div>
 
-    <div class="project">
+    <h2>Quick Actions</h2>
 
-        <h3>Quick Actions</h3>
-
-        <br>
-
+    <div class="dashboard-actions">
         <a href="/events" class="btn">View Events</a>
-
-        <br><br>
-
         <a href="/volunteers" class="btn">View Volunteers</a>
-
-        <br><br>
-
         <a href="/add-event" class="btn">Add Event</a>
-
+        <a href="/volunteer" class="btn">Register Volunteer</a>
     </div>
-
 </main>
 
 <footer>
