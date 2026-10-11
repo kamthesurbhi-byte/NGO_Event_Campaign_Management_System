@@ -79,10 +79,13 @@ def volunteer():
         values = (name, email, phone, address, skills)
 
         cursor.execute(sql, values)
+        volunteer_id = cursor.lastrowid
         db.commit()
         cursor.close()
 
-        return render_template("volunteer_success.html")
+        return render_template(
+    "volunteer_success.html",
+    volunteer_id=f"VOL{volunteer_id:03d}")
 
     return render_template("volunteer.html")
 
@@ -96,7 +99,7 @@ def volunteers():
     cursor = db.cursor(dictionary=True)
 
     cursor.execute(
-        "SELECT * FROM volunteers ORDER BY id DESC"
+        "SELECT * FROM volunteers ORDER BY id ASC"
     )
 
     volunteers_data = cursor.fetchall()

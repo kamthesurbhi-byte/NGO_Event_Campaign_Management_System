@@ -44,10 +44,12 @@
 
     <div class="project">
 
-        <table style="width:100%; border-collapse:collapse;">
+        <table style="width:100%; table-layout:fixed; border-collapse:collapse; overflow-wrap:anywhere;">
 
             <tr>
-
+                <th style="width:13%; padding:12px; border-bottom:2px solid #E67E22;">
+                    Volunteer ID
+                </th>
                 <th style="padding:12px; border-bottom:2px solid #E67E22;">
                     Name
                 </th>
@@ -74,7 +76,8 @@
             {% for volunteer in volunteers %}
 
             <tr>
-
+                <td style="padding:12px; border-bottom:1px solid #ddd; font-weight:bold; color:#E67E22;">VOL{{ "%03d"|format(volunteer.id) }}
+                </td>
                 <td style="padding:12px; border-bottom:1px solid #ddd;">
                     {{ volunteer.name }}
                 </td>
