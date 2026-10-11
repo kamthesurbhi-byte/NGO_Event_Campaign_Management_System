@@ -199,7 +199,9 @@ def dashboard():
         total_events=total_events,
         total_projects=total_projects
     )
-
+@app.route("/report")
+def report():
+    return render_template("report.html")
 # =========================
 # Run Application
 # =========================
