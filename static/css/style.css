@@ -254,3 +254,12 @@ footer {
         align-items: center;
     }
 }
+.home-image {
+    width: 100%;
+    max-width: 900px;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+}

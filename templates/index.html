@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,27 +15,30 @@
 <body>
 
 <header>
+    <h2>NGO Event & Campaign Management System</h2>
 
-<h2>NGO Event & Campaign Management System</h2>
     <nav>
-    <a href="/">Home</a>
-    <a href="/dashboard">Dashboard</a>
-    <a href="/about">About</a>
-    <a href="/projects">Projects</a>
-    <a href="/events">Events</a>
-    <a href="/volunteer">Volunteer</a>
-    <a href="/contact">Contact</a>
-    <a href="/report">Report</a>
-</nav>
-
+        <a href="/">Home</a>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/about">About</a>
+        <a href="/projects">Projects</a>
+        <a href="/events">Events</a>
+        <a href="/volunteer">Volunteer</a>
+        <a href="/contact">Contact</a>
+        <a href="/report">Report</a>
+    </nav>
 </header>
-
 
 <!-- Hero Section -->
 
 <div class="hero">
 
     <h1>NGO Event & Campaign Management System</h1>
+
+    <!-- Home Image -->
+    <img src="{{ url_for('static', filename='images/home.jpg') }}"
+         alt="NGO community activities"
+         class="home-image">
 
     <p>
         Manage NGO events, campaigns and volunteers easily.
@@ -45,7 +49,6 @@
     </a>
 
 </div>
-
 
 <!-- NGO Information -->
 
@@ -64,7 +67,6 @@
     </p>
 
 </section>
-
 
 <!-- Current Project -->
 
@@ -91,15 +93,12 @@
 
 </main>
 
-
 <footer>
-
     <p>
         © 2026 NGO Event & Campaign Management System
     </p>
-
 </footer>
 
 </body>
-
 </html>
+```
